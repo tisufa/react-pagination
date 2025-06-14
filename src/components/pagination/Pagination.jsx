@@ -12,10 +12,7 @@ const Pagination = () => {
     const totalRecord = 65;
     const size = 5;
     const half = Math.floor(size / 2);
-
     const totalPage = Math.ceil(totalRecord / perPage);
-    console.log(totalPage, "totalPage");
-
     const createPagination = () => {
       if (totalPage <= size + 1) {
         return Array.from({ length: totalPage }, (_, index) => index + 1);
@@ -102,3 +99,4 @@ const Pagination = () => {
 };
 
 export { Pagination };
+
