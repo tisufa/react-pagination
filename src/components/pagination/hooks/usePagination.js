@@ -16,9 +16,11 @@ const usePagination = (perPage = 10, size = 5) => {
   };
 
   const setTotalRecord = (totalRecord) => {
+    const totalPage = Math.ceil((totalRecord || 0) / state.perPage) || 1;
     setState((prev) => ({
       ...prev,
       totalRecord,
+      totalPage,
     }));
   };
 
